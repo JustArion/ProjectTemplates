@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <RootNamespace>NativeDLLTemplate</RootNamespace>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <CopyNupkgToOutputDirectory>true</CopyNupkgToOutputDirectory>
+
+        <PublishAot>true</PublishAot>
+
+        <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Vanara.PInvoke.Kernel32" Version="4.0.2" />
+        <PackageReference Include="Vanara.PInvoke.User32" Version="4.0.2" />
+    </ItemGroup>
+
+</Project>
