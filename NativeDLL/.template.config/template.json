@@ -1,28 +1,17 @@
 {
-    "author": "arion",
-    "name": "Native DLL",
-    "description": "A project for creating Native DLLs using C#",
-    "identity": "Dawn.NativeDLL.1.0",
-    "shortName": "nativedll",
-    "tags": {
-        "language": "C#",
-        "type": "project"
-    },
-    "sourceName": "NativeDLLTemplate",
-    "symbols": {
-        "Framework": {
-            "type": "parameter",
-            "description": "The target framework for the project.",
-            "datatype": "choice",
-            "choices": [
-                {
-                    "choice": "net7.0-windows"
-                },
-                {
-                    "choice": "net8.0-windows"
-                }
-            ],
-            "defaultValue": "net8.0-windows"
-        }
-    }
-}
+  "$schema": "http://json.schemastore.org/template",
+  "author": "JustArion",
+  "classifications": [
+  "NativeDll","AOT","Native", "DLL"
+  ],
+  "tags": {
+      "language": "C#",
+      "type":"project"
+  },
+  "identity": "Dawn.NativeDLL.Template",
+  "name": "Native DLL",
+  "shortName": "native-dll",
+  "sourceName": "NativeDLLTemplate",
+  "preferNameDirectory": true
+  }
+  
