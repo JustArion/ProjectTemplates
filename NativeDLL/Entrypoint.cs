@@ -1,6 +1,6 @@
 ﻿namespace NativeDLLTemplate;
 
-internal static class Entrypoint
+internal static class EntryPoint
 {
     public static void DllMain()
     {

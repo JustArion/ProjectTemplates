@@ -23,7 +23,7 @@ internal static unsafe class Bootstrapper
         try
         {
             HModule = hModule;
-            Entrypoint.DllMain();
+            EntryPoint.DllMain();
         }
         catch (Exception e)
         {
