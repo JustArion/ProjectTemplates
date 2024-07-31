@@ -1,4 +1,4 @@
-﻿namespace NativeDLLTemplate.EntryPoint;
+﻿namespace NativeDLLTemplate;
 
 internal static class EntryPoint
 {
