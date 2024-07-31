@@ -1,6 +1,6 @@
-﻿namespace NativeDLLTemplate;
+﻿namespace NativeDLLTemplate.EntryPoint;
 
-internal static unsafe class Bootstrapper
+internal static class EntryPoint
 {
     internal static HINSTANCE HModule { get; private set; }
     /// <summary>
@@ -13,17 +13,17 @@ internal static unsafe class Bootstrapper
             return true;
         
         DisableThreadLibraryCalls(module);
-        CreateThread(null, default, _MainThread, (nint)module, CREATE_THREAD_FLAGS.RUN_IMMEDIATELY, out _);
+        CreateThread(null, default, MainThread, (nint)module, CREATE_THREAD_FLAGS.RUN_IMMEDIATELY, out _);
 
         return true;
     }
     
-    private static uint _MainThread(nint hModule)
+    private static uint MainThread(nint hModule)
     {
         try
         {
             HModule = hModule;
-            EntryPoint.DllMain();
+            Start.DllMain();
         }
         catch (Exception e)
         {
